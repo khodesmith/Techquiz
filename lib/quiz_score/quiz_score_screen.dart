@@ -8,9 +8,14 @@ import 'package:tech_quiz/screens/categories/categories.dart';
 import 'package:tech_quiz/screens/categories/widget/course_display.dart';
 
 class QuizScoreScreen extends StatelessWidget {
-  const QuizScoreScreen({required this.quizQuestion, super.key});
+  const QuizScoreScreen({
+    required this.quizQuestion,
+    required this.quizScore,
+    super.key,
+  });
 
   final List<QuizModel> quizQuestion;
+  final int quizScore;
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +69,7 @@ class QuizScoreScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  '18/${quizQuestion.length}',
+                  '$quizScore/${quizQuestion.length}',
                   style: const TextStyle(
                     fontSize: 40,
                     color: Colors.white,

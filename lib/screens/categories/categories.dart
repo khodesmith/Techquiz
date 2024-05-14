@@ -19,9 +19,7 @@ class CategoryScreen extends StatelessWidget {
       ),
       body: const Padding(
         padding: EdgeInsets.all(10),
-        child: Expanded(
-          child: CourseDisplay(),
-        ),
+        child: CourseDisplay(),
       ),
     );
   }

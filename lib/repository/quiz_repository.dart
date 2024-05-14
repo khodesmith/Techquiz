@@ -21,6 +21,8 @@ class QuizRepository {
         },
       );
 
+      log(uri.toString());
+
       final response = await http.get(uri);
       final body = jsonDecode(response.body) as List<dynamic>;
       log(body.toString());
